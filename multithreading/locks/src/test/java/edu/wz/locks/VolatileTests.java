@@ -48,7 +48,7 @@ public class VolatileTests {
 
         ExecutorService executorService = Executors.newFixedThreadPool(16);
         VolatileCounter volatileCounter = new VolatileCounter();
-        final int times = 10000;
+        final int times = 40000;
         Runnable increments = () -> {
             for(int i =0; i< times; i ++){
                 volatileCounter.increment();
