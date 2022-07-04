@@ -159,6 +159,7 @@ public class LocksTests {
         t2.join();
 
         assertThat(counter.getCount()).isEqualTo(1);
+        assertThat(reads.getReadTimes()).isGreaterThan(0);
         assertThat(reads.wasItBlocked()).isTrue();
 
 

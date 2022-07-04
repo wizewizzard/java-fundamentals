@@ -6,7 +6,13 @@ import java.util.concurrent.locks.ReadWriteLock;
 public class RunnableThatMarksThatItWasBlocked implements Runnable{
     private boolean wasBlocked = false;
 
+    private int readTimes = 0;
+
     private final ReadWriteLock readWriteLock;
+
+    public int getReadTimes() {
+        return readTimes;
+    }
 
     public boolean wasItBlocked() {
         return wasBlocked;
@@ -25,6 +31,7 @@ public class RunnableThatMarksThatItWasBlocked implements Runnable{
                 boolean lockAcquired = readLock.tryLock();
                 if(lockAcquired){
                     try {
+                        readTimes++;
                         //blah blah reading...
                     }
                     finally {
