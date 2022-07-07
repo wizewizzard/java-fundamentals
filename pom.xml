@@ -6,6 +6,7 @@
     <modules>
         <module>streams</module>
         <module>collections</module>
+        <module>multithreading</module>
     </modules>
 
     <groupId>edu.wz</groupId>
