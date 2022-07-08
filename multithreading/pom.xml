@@ -8,6 +8,7 @@
         <module>producerconsumer</module>
         <module>locks</module>
         <module>futures</module>
+        <module>executorservices</module>
     </modules>
     <parent>
         <artifactId>fundamentals</artifactId>
