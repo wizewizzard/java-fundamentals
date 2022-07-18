@@ -7,6 +7,7 @@
         <module>streams</module>
         <module>multithreading</module>
         <module>collections</module>
+        <module>jdbc</module>
     </modules>
 
     <groupId>edu.wz</groupId>
